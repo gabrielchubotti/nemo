@@ -14,6 +14,7 @@ struct Home: View {
                 SideBar()
             }
         }
+        .ignoresSafeArea()
         .frame(width: isMacOS() ? getRect().width / 1.7 : nil, height: isMacOS() ? getRect().height - 180 : nil, alignment: .leading)
         .background(Color.white.ignoresSafeArea())
         .preferredColorScheme(.light)
@@ -41,7 +42,7 @@ struct Home: View {
             Image(systemName: "plus")
                 .font(.title2)
                 .foregroundStyle(.white)
-                .padding(isMacOS() ? 12: 15)
+                .padding(isMacOS() ? 12 : 15)
                 .background(Color.black)
                 .clipShape(Circle())
         }

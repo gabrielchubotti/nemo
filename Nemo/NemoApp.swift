@@ -13,5 +13,8 @@ struct NemoApp: App {
         WindowGroup {
             ContentView()
         }
+        #if os(macOS)
+        .windowStyle(HiddenTitleBarWindowStyle())
+        #endif
     }
 }
