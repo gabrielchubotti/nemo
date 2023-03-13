@@ -30,11 +30,30 @@ struct Home: View {
                         .frame(width: 1)
                 }
             }
+            MainContent()
         }
         .ignoresSafeArea()
         .frame(width: isMacOS() ? getRect().width / 1.7 : nil, height: isMacOS() ? getRect().height - 180 : nil, alignment: .leading)
         .background(Color.white.ignoresSafeArea())
         .preferredColorScheme(.light)
+    }
+    
+    @ViewBuilder
+    func MainContent()-> some View {
+        VStack(spacing: 15){
+            
+            //Search Bar
+            HStack(spacing: 10){
+                Image(systemName: "magnifyingglass")
+                    .font(.title3)
+                    .foregroundColor(.gray)
+                
+                TextField("Search", text: .constant(""))
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.bottom, isMacOS() ? 0 : 10)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
     
     @ViewBuilder
@@ -83,6 +102,12 @@ struct Home: View {
                 showColors.toggle()
                 animateButton.toggle()
             }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
+                withAnimation(.spring()){
+                    animateButton.toggle()
+                }
+            }
         } label: {
             Image(systemName: "plus")
                 .font(.title2)
@@ -123,3 +148,5 @@ extension View {
         return true
     }
 }
+
+//Hiding focus ring 
