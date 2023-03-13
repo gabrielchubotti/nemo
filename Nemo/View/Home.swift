@@ -52,8 +52,27 @@ struct Home: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom, isMacOS() ? 0 : 10)
+            
+            ScrollView(.vertical, showsIndicators: false){
+                VStack(spacing: 15){
+                    Text("Notes")
+                        .font(isMacOS() ? .system(size: 33, weight: .bold) : .largeTitle.bold())
+                }
+                .padding(.top, isMacOS() ?  45 : 30)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                //columns
+                
+                let columns = Array(repeating: GridItem(.flexible(), spacing: isMacOS() ? 25 : 15), count: isMacOS() ? 3 : 1)
+                LazyVGrid(columns: columns, spacing: 25) {
+                    //Notes ....
+                    
+                }
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .padding(.top, isMacOS() ? 40 : 0)
+        .padding(.horizontal, 25)
     }
     
     @ViewBuilder
@@ -149,4 +168,12 @@ extension View {
     }
 }
 
-//Hiding focus ring 
+//Hiding focus ring
+#if os(macOS)
+extension NSTextField {
+    open override var focusRingType: NSFocusRingType{
+        get{.none}
+        set{}
+    }
+}
+#endif

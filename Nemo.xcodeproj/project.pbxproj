@@ -15,6 +15,7 @@
 		43C3D76129B80EED0012E78A /* NemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D76029B80EED0012E78A /* NemoUITests.swift */; };
 		43C3D76329B80EED0012E78A /* NemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D76229B80EED0012E78A /* NemoUITestsLaunchTests.swift */; };
 		43C3D77129B8ACA60012E78A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D77029B8ACA60012E78A /* Home.swift */; };
+		43C498BB29BEB1370052CAB7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BA29BEB1370052CAB7 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		43C3D76029B80EED0012E78A /* NemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NemoUITests.swift; sourceTree = "<group>"; };
 		43C3D76229B80EED0012E78A /* NemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		43C3D77029B8ACA60012E78A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		43C498BA29BEB1370052CAB7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		43C3D74329B80EEC0012E78A /* Nemo */ = {
 			isa = PBXGroup;
 			children = (
+				43C498B929BEB1180052CAB7 /* Model */,
 				43C3D76F29B8AC980012E78A /* View */,
 				43C3D74429B80EEC0012E78A /* NemoApp.swift */,
 				43C3D74629B80EEC0012E78A /* ContentView.swift */,
@@ -138,6 +141,14 @@
 				43C3D77029B8ACA60012E78A /* Home.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		43C498B929BEB1180052CAB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43C498BA29BEB1370052CAB7 /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				43C3D74729B80EEC0012E78A /* ContentView.swift in Sources */,
 				43C3D77129B8ACA60012E78A /* Home.swift in Sources */,
 				43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */,
+				43C498BB29BEB1370052CAB7 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
