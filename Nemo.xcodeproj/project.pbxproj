@@ -16,6 +16,7 @@
 		43C3D76329B80EED0012E78A /* NemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D76229B80EED0012E78A /* NemoUITestsLaunchTests.swift */; };
 		43C3D77129B8ACA60012E78A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D77029B8ACA60012E78A /* Home.swift */; };
 		43C498BB29BEB1370052CAB7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BA29BEB1370052CAB7 /* Note.swift */; };
+		43C498BD29BEB18C0052CAB7 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BC29BEB18C0052CAB7 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		43C3D76229B80EED0012E78A /* NemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		43C3D77029B8ACA60012E78A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		43C498BA29BEB1370052CAB7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		43C498BC29BEB18C0052CAB7 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				43C3D77029B8ACA60012E78A /* Home.swift */,
+				43C498BC29BEB18C0052CAB7 /* BlurView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				43C3D74729B80EEC0012E78A /* ContentView.swift in Sources */,
 				43C3D77129B8ACA60012E78A /* Home.swift in Sources */,
+				43C498BD29BEB18C0052CAB7 /* BlurView.swift in Sources */,
 				43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */,
 				43C498BB29BEB1370052CAB7 /* Note.swift in Sources */,
 			);
