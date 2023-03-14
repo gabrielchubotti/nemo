@@ -32,10 +32,15 @@ struct Home: View {
             }
             MainContent()
         }
+        #if os(macOS)
         .ignoresSafeArea()
+        #endif
         .frame(width: isMacOS() ? getRect().width / 1.7 : nil, height: isMacOS() ? getRect().height - 180 : nil, alignment: .leading)
         .background(Color.white.ignoresSafeArea())
         .preferredColorScheme(.light)
+        #if os(iOS)
+        overlay(SideBar())
+        #endif
     }
     
     @ViewBuilder
@@ -52,6 +57,16 @@ struct Home: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom, isMacOS() ? 0 : 10)
+            .overlay(
+                Rectangle()
+                    .fill(Color.gray.opacity(0.15))
+                    .frame(height: 1)
+                    .padding(.horizontal, -25)
+                    .offset(y: 6),
+                
+                alignment: .bottom
+            
+            )
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 15){
@@ -117,9 +132,11 @@ struct Home: View {
     @ViewBuilder
     func SideBar()-> some View {
         VStack {
-            Text("Pocket")
-                .font(.title2)
-                .fontWeight(.semibold)
+            if isMacOS(){
+                Text("Pocket")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+            }
             
             //Add Button
             AddButton()
