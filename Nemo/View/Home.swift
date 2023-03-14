@@ -139,8 +139,10 @@ struct Home: View {
             }
             
             //Add Button
-            AddButton()
-                .zIndex(1)
+            if isMacOS() {
+                AddButton()
+                    .zIndex(1)
+            }
             
             VStack(spacing: 15){
                 //Colors
@@ -156,18 +158,29 @@ struct Home: View {
                 ForEach(colors,id: \.self){ color in
                     Circle()
                         .fill(color)
-                        .frame(width: 20, height: 20)
+                        .frame(width: isMacOS() ? 20 : 25, height: isMacOS() ? 20 : 25)
                 }
             }
             .padding(.top, 20)
             .frame(height: showColors ? nil : 0)
             .opacity(showColors ? 1 : 0 )
             .zIndex(0)
+            
+            if !isMacOS() {
+                AddButton()
+                    .zIndex(1)
+            }
         }
+        #if os(macOS)
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.vertical)
         .padding(.horizontal, 22)
         .padding(.top, 35)
+        #else
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+        .padding()
+
+        #endif
     }
     
     @ViewBuilder
