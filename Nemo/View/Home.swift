@@ -65,14 +65,53 @@ struct Home: View {
                 
                 let columns = Array(repeating: GridItem(.flexible(), spacing: isMacOS() ? 25 : 15), count: isMacOS() ? 3 : 1)
                 LazyVGrid(columns: columns, spacing: 25) {
+                    
                     //Notes ....
+                    ForEach(notes){ note in
+                        CardView(note: note)
+                    }
                     
                 }
+                .padding(.top)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.top, isMacOS() ? 40 : 0)
         .padding(.horizontal, 25)
+    }
+    
+    @ViewBuilder
+    func CardView(note: Note)-> some View {
+        VStack{
+            Text(note.note)
+                .font(isMacOS() ? .title3 : .body)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            HStack{
+                Text(note.date, style: .date)
+                    .foregroundColor(.black)
+                    .opacity(0.8)
+                
+                Spacer(minLength: 0)
+                
+                Button {
+                    //code
+                } label: {
+                    Image(systemName: "pencil")
+                        .font(.system(size: 15, weight: .bold))
+                        .padding(8)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .clipShape(Circle())
+                }
+
+            }
+            .padding(.top, 55)
+        }
+        .padding()
+        .background(note.cardColor)
+        .cornerRadius(18)
     }
     
     @ViewBuilder
