@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43617C7C29C1404B00C12FC2 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BC29BEB18C0052CAB7 /* BlurView.swift */; };
 		43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D74429B80EEC0012E78A /* NemoApp.swift */; };
 		43C3D74729B80EEC0012E78A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D74629B80EEC0012E78A /* ContentView.swift */; };
 		43C3D74929B80EED0012E78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C3D74829B80EED0012E78A /* Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		43C3D76329B80EED0012E78A /* NemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D76229B80EED0012E78A /* NemoUITestsLaunchTests.swift */; };
 		43C3D77129B8ACA60012E78A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D77029B8ACA60012E78A /* Home.swift */; };
 		43C498BB29BEB1370052CAB7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BA29BEB1370052CAB7 /* Note.swift */; };
-		43C498BD29BEB18C0052CAB7 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BC29BEB18C0052CAB7 /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,7 +286,7 @@
 			files = (
 				43C3D74729B80EEC0012E78A /* ContentView.swift in Sources */,
 				43C3D77129B8ACA60012E78A /* Home.swift in Sources */,
-				43C498BD29BEB18C0052CAB7 /* BlurView.swift in Sources */,
+				43617C7C29C1404B00C12FC2 /* BlurView.swift in Sources */,
 				43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */,
 				43C498BB29BEB1370052CAB7 /* Note.swift in Sources */,
 			);
@@ -447,6 +447,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -485,6 +486,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

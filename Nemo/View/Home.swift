@@ -179,7 +179,10 @@ struct Home: View {
         #else
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
         .padding()
-
+        
+        .background(
+            BlurView(style: .systemUltraThinMaterialDark)
+                .ignoresSafeArea())
         #endif
     }
     
