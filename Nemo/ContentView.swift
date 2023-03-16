@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab = "Home"
+    
     var body: some View {
-       Home()
-            .buttonStyle(.borderless)
-            .textFieldStyle(.plain)
+        
+        TabView(selection: $selectedTab) {
+            Home()
+                .buttonStyle(.borderless)
+                .textFieldStyle(.plain)
+                .tabItem {
+                    Label("Home", systemImage: "home")
+                }
+            Text("Profile")
+                .tabItem {
+                    Label("Profile", systemImage: "profile")
+                }
+        }
+      // Home()
+       //     .buttonStyle(.borderless)
+       //     .textFieldStyle(.plain)
     }
 }
 

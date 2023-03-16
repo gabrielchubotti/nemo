@@ -183,6 +183,7 @@ struct Home: View {
         .background(
             BlurView(style: .systemUltraThinMaterialDark)
                 .ignoresSafeArea())
+
         #endif
     }
     
