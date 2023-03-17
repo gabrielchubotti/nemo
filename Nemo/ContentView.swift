@@ -18,11 +18,11 @@ struct ContentView: View {
                 .buttonStyle(.borderless)
                 .textFieldStyle(.plain)
                 .tabItem {
-                    Label("Home", systemImage: "home")
+                    Label("Home", systemImage: "house.circle")
                 }
             Text("Profile")
                 .tabItem {
-                    Label("Profile", systemImage: "profile")
+                    Label("Profile", systemImage: "person.circle")
                 }
         }
       // Home()
