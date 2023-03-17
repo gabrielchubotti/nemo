@@ -20,27 +20,12 @@ struct Home: View {
     var body: some View {
         
         HStack(spacing: 0){
-            
-            //Side bar
-            if isMacOS(){
-                Group{
-                    SideBar()
-                    Rectangle()
-                        .fill(Color.gray.opacity(0.15))
-                        .frame(width: 1)
-                }
-            }
             MainContent()
         }
-        #if os(macOS)
-        .ignoresSafeArea()
-        #endif
-        .frame(width: isMacOS() ? getRect().width / 1.7 : nil, height: isMacOS() ? getRect().height - 180 : nil, alignment: .leading)
         .background(Color.white.ignoresSafeArea())
         .preferredColorScheme(.light)
-        #if os(iOS)
-        overlay(SideBar())
-        #endif
+        .overlay(SideBar())
+        
     }
     
     @ViewBuilder
@@ -56,7 +41,7 @@ struct Home: View {
                 TextField("Search", text: .constant(""))
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.bottom, isMacOS() ? 0 : 10)
+            .padding(.bottom, 10)
             .overlay(
                 Rectangle()
                     .fill(Color.gray.opacity(0.15))
@@ -71,14 +56,14 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 15){
                     Text("Notes")
-                        .font(isMacOS() ? .system(size: 33, weight: .bold) : .largeTitle.bold())
+                        .font(.largeTitle.bold())
                 }
-                .padding(.top, isMacOS() ?  45 : 30)
+                .padding(.top, 30)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
                 //columns
                 
-                let columns = Array(repeating: GridItem(.flexible(), spacing: isMacOS() ? 25 : 15), count: isMacOS() ? 3 : 1)
+                let columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 1)
                 LazyVGrid(columns: columns, spacing: 25) {
                     
                     //Notes ....
@@ -91,7 +76,6 @@ struct Home: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .padding(.top, isMacOS() ? 40 : 0)
         .padding(.horizontal, 25)
     }
     
@@ -99,7 +83,7 @@ struct Home: View {
     func CardView(note: Note)-> some View {
         VStack{
             Text(note.note)
-                .font(isMacOS() ? .title3 : .body)
+                .font(.body)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -132,21 +116,8 @@ struct Home: View {
     @ViewBuilder
     func SideBar()-> some View {
         VStack {
-            if isMacOS(){
-                Text("Pocket")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-            }
-            
-            //Add Button
-            if isMacOS() {
-                AddButton()
-                    .zIndex(1)
-            }
-            
             VStack(spacing: 15){
                 //Colors
-                
                 let colors = [
                     Color(#colorLiteral(red: 1, green: 0.8687317967, blue: 0.6037406921, alpha: 1)),
                     Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)),
@@ -158,7 +129,7 @@ struct Home: View {
                 ForEach(colors,id: \.self){ color in
                     Circle()
                         .fill(color)
-                        .frame(width: isMacOS() ? 20 : 25, height: isMacOS() ? 20 : 25)
+                        .frame(width: 25, height: 25)
                 }
             }
             .padding(.top, 20)
@@ -166,25 +137,17 @@ struct Home: View {
             .opacity(showColors ? 1 : 0 )
             .zIndex(0)
             
-            if !isMacOS() {
-                AddButton()
-                    .zIndex(1)
-            }
+            AddButton()
+                .zIndex(1)
+            
         }
-        #if os(macOS)
-        .frame(maxHeight: .infinity, alignment: .top)
-        .padding(.vertical)
-        .padding(.horizontal, 22)
-        .padding(.top, 35)
-        #else
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
         .padding()
         
-        .background(
-            BlurView(style: .systemUltraThinMaterialDark)
-                .ignoresSafeArea())
+        //.background(
+        //    BlurView(style: .systemUltraThinMaterialDark)
+         //       .ignoresSafeArea())
 
-        #endif
     }
     
     @ViewBuilder
@@ -205,7 +168,7 @@ struct Home: View {
                 .font(.title2)
                 .foregroundStyle(.white)
                 .scaleEffect(animateButton ? 1.1 : 1)
-                .padding(isMacOS() ? 12 : 15)
+                .padding(15)
                 .background(Color.black)
                 .clipShape(Circle())
         }
@@ -226,27 +189,7 @@ struct Home_Previews: PreviewProvider {
 
 extension View {
     func getRect() -> CGRect {
-        #if os(iOS)
         return UIScreen.main.bounds
-        #else
-        return NSScreen.main!.visibleFrame
-        #endif
-    }
-    
-    func isMacOS()->Bool {
-        #if os(iOS)
-        return false
-        #endif
-        return true
+       
     }
 }
-
-//Hiding focus ring
-#if os(macOS)
-extension NSTextField {
-    open override var focusRingType: NSFocusRingType{
-        get{.none}
-        set{}
-    }
-}
-#endif

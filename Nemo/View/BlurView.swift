@@ -3,8 +3,7 @@
 //  Nemo
 //
 //  Created by Gabriel Chu Bottiglieri on 12/03/23.
-//
-#if os(iOS)
+/**/
 import SwiftUI
 
 struct BlurView: UIViewRepresentable {
@@ -20,5 +19,4 @@ struct BlurView: UIViewRepresentable {
         
     }
 }
-#endif
 
