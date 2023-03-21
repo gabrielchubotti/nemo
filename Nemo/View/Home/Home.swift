@@ -18,10 +18,18 @@ struct Home: View {
             .padding(30)
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            DailyMotivationView()
-            
-            AchievementsView()
-                .frame(width: 300, height: 200)
+            VStack(spacing: 30){
+                DailyMotivationView()
+                
+                Spacer()
+                
+                ContributionChartView(data: [0,3,4,2,4,2,5,1,3], rows: 3, columns: 3, targetValue: 5)
+                
+                Spacer()
+                
+                AchievementsView()
+                    .frame(width: 300, height: 200)
+            }
         }
     }
 }

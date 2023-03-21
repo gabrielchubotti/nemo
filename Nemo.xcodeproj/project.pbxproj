@@ -21,6 +21,7 @@
 		43CE7B3129C93B1700C7CBAA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3029C93B1700C7CBAA /* Home.swift */; };
 		43CE7B3429C93B3E00C7CBAA /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3329C93B3E00C7CBAA /* AchievementsView.swift */; };
 		43CE7B3629C93D4C00C7CBAA /* DailyMotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3529C93D4C00C7CBAA /* DailyMotivationView.swift */; };
+		43CE7B3829C93F9B00C7CBAA /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3729C93F9B00C7CBAA /* ContributionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		43CE7B3029C93B1700C7CBAA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		43CE7B3329C93B3E00C7CBAA /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		43CE7B3529C93D4C00C7CBAA /* DailyMotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotivationView.swift; sourceTree = "<group>"; };
+		43CE7B3729C93F9B00C7CBAA /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +115,8 @@
 				43617C7D29C1505800C12FC2 /* Info.plist */,
 				43C498B929BEB1180052CAB7 /* Model */,
 				43C3D76F29B8AC980012E78A /* View */,
-				43C3D74429B80EEC0012E78A /* NemoApp.swift */,
 				43C3D74629B80EEC0012E78A /* ContentView.swift */,
+				43C3D74429B80EEC0012E78A /* NemoApp.swift */,
 				43C3D74829B80EED0012E78A /* Assets.xcassets */,
 				43C3D74A29B80EED0012E78A /* Nemo.entitlements */,
 				43C3D74B29B80EED0012E78A /* Preview Content */,
@@ -150,11 +152,9 @@
 		43C3D76F29B8AC980012E78A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				43CE7B3229C93B2E00C7CBAA /* SubViews */,
-				43C3D77029B8ACA60012E78A /* NotesView.swift */,
-				43617C7E29C402B700C12FC2 /* Profile.swift */,
-				43C498BC29BEB18C0052CAB7 /* BlurView.swift */,
-				43CE7B3029C93B1700C7CBAA /* Home.swift */,
+				43CE7B3B29C93FC600C7CBAA /* Profile */,
+				43CE7B3A29C93FC300C7CBAA /* Notes */,
+				43CE7B3929C93FC000C7CBAA /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,8 +172,35 @@
 			children = (
 				43CE7B3329C93B3E00C7CBAA /* AchievementsView.swift */,
 				43CE7B3529C93D4C00C7CBAA /* DailyMotivationView.swift */,
+				43CE7B3729C93F9B00C7CBAA /* ContributionView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		43CE7B3929C93FC000C7CBAA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				43CE7B3029C93B1700C7CBAA /* Home.swift */,
+				43CE7B3229C93B2E00C7CBAA /* SubViews */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		43CE7B3A29C93FC300C7CBAA /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				43C3D77029B8ACA60012E78A /* NotesView.swift */,
+				43C498BC29BEB18C0052CAB7 /* BlurView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		43CE7B3B29C93FC600C7CBAA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				43617C7E29C402B700C12FC2 /* Profile.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +339,7 @@
 				43617C7F29C402B700C12FC2 /* Profile.swift in Sources */,
 				43C3D77129B8ACA60012E78A /* NotesView.swift in Sources */,
 				43617C7C29C1404B00C12FC2 /* BlurView.swift in Sources */,
+				43CE7B3829C93F9B00C7CBAA /* ContributionView.swift in Sources */,
 				43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */,
 				43C498BB29BEB1370052CAB7 /* Note.swift in Sources */,
 				43CE7B3129C93B1700C7CBAA /* Home.swift in Sources */,
