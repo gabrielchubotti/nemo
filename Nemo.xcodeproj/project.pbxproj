@@ -19,7 +19,8 @@
 		43C3D77129B8ACA60012E78A /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D77029B8ACA60012E78A /* NotesView.swift */; };
 		43C498BB29BEB1370052CAB7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BA29BEB1370052CAB7 /* Note.swift */; };
 		43CE7B3129C93B1700C7CBAA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3029C93B1700C7CBAA /* Home.swift */; };
-		43CE7B3429C93B3E00C7CBAA /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3329C93B3E00C7CBAA /* Achievements.swift */; };
+		43CE7B3429C93B3E00C7CBAA /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3329C93B3E00C7CBAA /* AchievementsView.swift */; };
+		43CE7B3629C93D4C00C7CBAA /* DailyMotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CE7B3529C93D4C00C7CBAA /* DailyMotivationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,8 @@
 		43C498BA29BEB1370052CAB7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		43C498BC29BEB18C0052CAB7 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		43CE7B3029C93B1700C7CBAA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		43CE7B3329C93B3E00C7CBAA /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		43CE7B3329C93B3E00C7CBAA /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		43CE7B3529C93D4C00C7CBAA /* DailyMotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMotivationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +170,8 @@
 		43CE7B3229C93B2E00C7CBAA /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				43CE7B3329C93B3E00C7CBAA /* Achievements.swift */,
+				43CE7B3329C93B3E00C7CBAA /* AchievementsView.swift */,
+				43CE7B3529C93D4C00C7CBAA /* DailyMotivationView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -303,8 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CE7B3629C93D4C00C7CBAA /* DailyMotivationView.swift in Sources */,
 				43C3D74729B80EEC0012E78A /* ContentView.swift in Sources */,
-				43CE7B3429C93B3E00C7CBAA /* Achievements.swift in Sources */,
+				43CE7B3429C93B3E00C7CBAA /* AchievementsView.swift in Sources */,
 				43617C7F29C402B700C12FC2 /* Profile.swift in Sources */,
 				43C3D77129B8ACA60012E78A /* NotesView.swift in Sources */,
 				43617C7C29C1404B00C12FC2 /* BlurView.swift in Sources */,

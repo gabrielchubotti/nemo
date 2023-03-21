@@ -15,7 +15,9 @@ struct ContentView: View {
         
         TabView(selection: $selectedTab) {
             Home()
-                
+                .tabItem {
+                    Label("Home", systemImage: "paperclip.circle")
+                }
             
             NotesView()
                 .buttonStyle(.borderless)

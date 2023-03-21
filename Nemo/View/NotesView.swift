@@ -179,7 +179,7 @@ struct NotesView: View {
     }
 }
 
-struct Home_Previews: PreviewProvider {
+struct NotesView_Preview: PreviewProvider {
     static var previews: some View {
         NotesView()
     }
