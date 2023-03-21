@@ -15,10 +15,13 @@ struct ContentView: View {
         
         TabView(selection: $selectedTab) {
             Home()
+                
+            
+            NotesView()
                 .buttonStyle(.borderless)
                 .textFieldStyle(.plain)
                 .tabItem {
-                    Label("Home", systemImage: "house.circle")
+                    Label("Notes", systemImage: "house.circle")
                 }
             Profile()
                 .tabItem {
