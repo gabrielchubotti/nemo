@@ -9,7 +9,15 @@ import SwiftUI
 
 struct DailyMotivationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill")
+            .font(.body)
+            .bold()
+            .foregroundColor(.white)
+             .frame(width: 300, height: 80)
+             .background(RoundedRectangle(cornerRadius: 20).fill(Color.secondary).shadow(radius: 3))
+             .overlay(RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 4).foregroundColor(.primary))
+
+        
     }
 }
 

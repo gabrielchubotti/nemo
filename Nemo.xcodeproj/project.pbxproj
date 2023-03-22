@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43248C7129CA828300DF8D4B /* MotivationalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43248C7029CA828300DF8D4B /* MotivationalDB.swift */; };
 		43617C7C29C1404B00C12FC2 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C498BC29BEB18C0052CAB7 /* BlurView.swift */; };
 		43617C7F29C402B700C12FC2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43617C7E29C402B700C12FC2 /* Profile.swift */; };
 		43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3D74429B80EEC0012E78A /* NemoApp.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43248C7029CA828300DF8D4B /* MotivationalDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationalDB.swift; sourceTree = "<group>"; };
 		43617C7D29C1505800C12FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		43617C7E29C402B700C12FC2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		43C3D74129B80EEC0012E78A /* Nemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				43C498BA29BEB1370052CAB7 /* Note.swift */,
+				43248C7029CA828300DF8D4B /* MotivationalDB.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				43CE7B3429C93B3E00C7CBAA /* AchievementsView.swift in Sources */,
 				43617C7F29C402B700C12FC2 /* Profile.swift in Sources */,
 				43C3D77129B8ACA60012E78A /* NotesView.swift in Sources */,
+				43248C7129CA828300DF8D4B /* MotivationalDB.swift in Sources */,
 				43617C7C29C1404B00C12FC2 /* BlurView.swift in Sources */,
 				43CE7B3829C93F9B00C7CBAA /* ContributionView.swift in Sources */,
 				43C3D74529B80EEC0012E78A /* NemoApp.swift in Sources */,
