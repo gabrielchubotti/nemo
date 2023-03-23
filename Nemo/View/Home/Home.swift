@@ -23,7 +23,7 @@ struct Home: View {
                 
                 Spacer()
                 
-                ContributionChartView(data: [0,3,4,2,4,2,5,1,3], rows: 3, columns: 3, targetValue: 5)
+                ContributionChartView(data: [0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5], rows: 7, columns: 10, targetValue: 5)
                 
                 Spacer()
                 
