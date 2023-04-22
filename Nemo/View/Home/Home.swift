@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @State var arrayForChart: [Double] = [0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5]
+    
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false){
@@ -23,7 +26,7 @@ struct Home: View {
                 
                 Spacer()
                 
-                ContributionChartView(data: [0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5,1,3,0,3,4,2,4,2,5], rows: 7, columns: 10, targetValue: 5)
+                ContributionChartView(data: arrayForChart, rows: 7, columns: 10, targetValue: 5)
                 
                 Spacer()
                 
